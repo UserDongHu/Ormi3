@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>선택자</title>
+    <style>
+        div * {
+            border: 3px solid red;
+            padding: 10px;
+        }
+        h1{
+            text-decoration: underline;
+        }
+        #Hello{
+            color: blueviolet;
+        }
+        .Hello{
+            background-color: blue;
+        }
+        [type="button"]{
+            width: 200px;
+        }
+        h1, .Hello, #Hello, [type="button"]{
+            border-width: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h1 h1>Hello</h1>
+        <h2 class="Hello">Hello</h2>
+        <p id="Hello">Hello</p>
+        <button type="button">Hello</button>
+    </div>
+</body>
+
+</html>
