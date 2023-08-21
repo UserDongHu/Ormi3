@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        body {
+            font-family: sans-serif;
+        }
+
+        [class^="box"] {
+            width: 100px;
+            height: 100px;
+            background: rgba(141, 75, 246, 0.6);
+            color: #fff;
+            line-height: 100px;
+            text-align: center;
+        }
+
+        [class^="box"]:first-child {
+            background: rgba(46, 111, 242, 0.6)
+        }
+
+        [class^="box"]:last-child {
+            background: salmon;
+        }
+
+        .container {
+            background: skyblue;
+        }
+
+        .box:first-child,
+        .box:nth-child(2) {
+            float: left;
+        }
+
+
+        .box:last-child {
+            /*   clear:left; */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        container
+        <div class="box">A</div>
+        <div class="box">B</div>
+        <div class="box">C</div>
+    </div>
+</body>
+
+</html>
