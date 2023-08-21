@@ -1,0 +1,53 @@
+.write{
+    width: 700px;
+    margin: auto;
+}
+.write>.main-title{
+    margin-top: 0;
+}
+.write>.main-desc{
+    color: #767676;
+    margin-bottom: 5px;
+}
+.board-table{
+    border-collapse: collapse;
+    width: 100%;
+    border-top: 1px solid black;
+}
+.board-table th,
+.board-table td{
+    border-top: 0.5px solid black;
+    border-bottom: 0.5px solid black;
+    padding: 5px;
+}
+.board-table th{
+    background-color: #ddd;
+}
+#board-title,
+#board-content{
+    width: 100%;
+    box-sizing: border-box;
+}
+#board-content{
+    height: 250px;
+    resize: none;
+    border: 0.3px solid #ccc;
+}
+.btn-group{
+    margin-top: 10px;
+    display: flex;
+    justify-content: end;
+    gap: 5px;
+}
+.btn-group>.btn{
+    border: 0.3px solid #ccc;
+    background-color: #ddd;
+    text-decoration: none;
+    color: inherit;
+    font: inherit;
+    padding: 4px;
+    width: 60px;
+    text-align: center;
+    border-radius: 5px;
+    font-weight: bold;
+}

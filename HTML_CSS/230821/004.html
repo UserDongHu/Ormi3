@@ -9,7 +9,6 @@
         body {
             font-family: sans-serif;
         }
-
         [class^="box"] {
             width: 100px;
             height: 100px;
@@ -18,27 +17,26 @@
             line-height: 100px;
             text-align: center;
         }
-
         [class^="box"]:first-child {
             background: rgba(46, 111, 242, 0.6)
         }
-
         [class^="box"]:last-child {
             background: salmon;
         }
-
         .container {
             background: skyblue;
         }
-
+        .container::after{
+            content: 'after';
+            display: block;
+            clear: left;
+        }
         .box:first-child,
-        .box:nth-child(2) {
+        .box:nth-child(2){
             float: left;
         }
-
-
         .box:last-child {
-            /*   clear:left; */
+            float: left;
         }
     </style>
 </head>

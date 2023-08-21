@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>회원가입</title>
     <link rel="stylesheet" href="./css/common.css">
-    <link rel="stylesheet" href="./css/login-join.css">
+    <link rel="stylesheet" href="./css/join_pr.css">
 </head>
 
 <body>
@@ -37,8 +37,8 @@
                 <input id="user-nick" type="text" />
             </div>
 
-            <fieldset class="field">
-                <legend>성별</legend>
+            <div class="field">
+                <p>성별</p>
                 <ul>
                     <li>
                         <input id="gender1" name="gender" type="radio">
@@ -53,11 +53,11 @@
                         <label for="gender3">선택 안함</label>
                     </li>
                 </ul>
-            </fieldset>
+            </div>
 
-            <div class="field field-flex">
+            <div class="field">
                 <p>사용 기술</p>
-                <ul>
+                <ul class="tech">
                     <li>
                         <!-- name=on -->
                         <input id="tech1" value="HTML" type="checkbox">

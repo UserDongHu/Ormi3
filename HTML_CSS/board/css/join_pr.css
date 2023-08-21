@@ -1,0 +1,52 @@
+
+.login{
+    width: 400px;
+    margin: auto;
+}
+.main-title,
+.main-desc{
+    text-align: center;
+    margin-bottom: 15px;
+}
+.main-desc{
+    color: gray;
+}
+.main-form{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 50px;
+}
+.flex-input,
+.field{
+    display: flex;
+    align-items: center;
+}
+.flex-input>input{
+    border: 1px solid #ccc;
+    height: 27px;
+}
+.flex-input>input,
+.field>ul{
+    margin: auto 0 auto auto;
+    width: 320px;
+    border-radius: 5px;
+    }
+.field:nth-child(6){
+    align-items: start;
+}
+.field>ul{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+.login-btn{
+    height: 35px;
+    color: white;
+    background-color: royalblue;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
