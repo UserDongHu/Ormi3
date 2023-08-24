@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title></title>
+</head>
+
+<body>
+    <script>
+        // 2보다 크거나 또는 7보다 작은 x값 => t/f
+        const x = 1;
+        var S = x > 2; // false
+        var M = x < 7; // true
+        var A = S || M; // false || true => true
+        console.log(A);
+
+        // 함수
+        // f(x) = x + 1
+        function plus2(x){
+            // 로직
+            const result = x + 2;
+            return result;
+        }
+        // 함수 실행
+        const plus2Result = plus2(1337);
+        // console.log(plus2Result);
+        console.log(plus2(1337));
+
+        // forEach 그리고 callbackfn
+        // const arr = ['참외', '키위', '감귤'];
+        // arr.forEach(function(item, index){
+        //     console.log(item, `은 ${index}번째 입니다.`);
+        // });
+
+        // const arr = ['참외', '키위', '감귤'];
+        // function callbackfn(item, index, arr){
+        //     console.log(item, `은 ${index}번째 입니다.`);
+        // }
+        // arr.forEach(callbackfn);
+
+        // const arr = ['참외', '키위', '감귤'];
+        // arr.forEach(function(item, index, arr){
+        //     console.log(item, `은 ${index}번째 입니다.`);
+        //     console.log(`원래 배열은 ${arr}입니다.`);
+        // });
+        
+        const arr = [1,2,3,4,5];
+        function filterFn(num){
+            return num % 2 === 1; //홀수인지 판별
+        }
+        // const result = arr.filter(filterFn);
+        // console.log(result);
+        const result = arr.filter((num)=>num%2===1); // 화살표 익명함수
+        console.log(result);
+
+        //arr.reduce
+        const arr2 = [1,2,3,4];
+        result2 = arr2.reduce((a,c)=>a+c,0);
+        console.log(result2);
+
+        // reduce를 이용해서 홀수만 누적하기
+        const arr3 = [1,2,3];
+        function callbackfn(item){
+            let result;
+            if(item%2===1){
+                result = "홀수";
+            } else {
+                result = "짝수";
+            }
+            return result;
+        }
+        // 홀수 짝수 구분해서 텍스트로 배열 만들기
+        console.log(arr3.map(callbackfn));
+
+    </script>
+</body>
+
+</html>
