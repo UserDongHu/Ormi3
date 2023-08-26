@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+
+<body>
+    <p></p>
+    <input type="text">
+    <button>강조</button>
+</body>
+<script>
+    const myBtn = document.querySelector("button");
+    const myP = document.querySelector("p");
+    const myInput = document.querySelector("input");
+
+    myInput.addEventListener('input', () => {
+        myP.textContent = myInput.value;
+    });
+
+    myBtn.addEventListener('click', function () {
+        if (myP.style.fontWeight === "bold") {
+            myP.style.fontWeight = "";
+            myBtn.textContent = "강조"
+        } else {
+            myP.style.fontWeight = "bold";
+            myBtn.textContent = "강조해제";
+        }
+    });
+</script>
+
+</html>

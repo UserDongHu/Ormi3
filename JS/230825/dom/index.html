@@ -24,7 +24,7 @@
 </style>
 
 <body>
-    <div>클릭해봐</div>>
+    <div>클릭해봐</div>
     <ul>
     </ul>
     <input />
@@ -60,14 +60,14 @@
 
     const myBtn = document.querySelector("button");
     const myUl = document.querySelector("ul");
-    const input = document.querySelector("input");
+    const myinput = document.querySelector("input");
 
     myBtn.addEventListener('click', function () {
-        const inputText = input.value;
+        const inputText = myinput.value;
         if (inputText.trim() === "") {
             return; // 이 뒤에 있는 코드는 실행되지 않습니다.
         }
-        input.value = "";
+        myinput.value = "";
         const myLi = document.createElement('li');
         const btnDel = document.createElement('button');
         const btnTxt = document.createTextNode('완료');
@@ -88,7 +88,7 @@
 
     const img = document.querySelector('img');
     console.log(img.dataset);
-    console.log(img.dataset.sehipId);
+    console.log(img.dataset.shipId);
 </script>
 
 </html>

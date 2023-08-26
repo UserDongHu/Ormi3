@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+
+<body>
+    <p id='myP'>이것은 나의 P요</p>
+    <img src="https://어쩌구저쩌구">
+</body>
+<script>
+	const target = document.querySelector('p');
+    const myimg = document.querySelector('img');
+	const idAttr = target.getAttribute('id');
+    console.log(idAttr);
+    
+    myimg.setAttribute("src", "https://이사진으로할게요");
+    console.log(myimg.getAttribute('src'));
+</script>
+</html>

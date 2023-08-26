@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+
+<body>
+    <img class="MacbookPro" src="img.jpg" data-cpu="M1" data-ram=16 data-ssd=256>
+</body>
+<script>
+    const myimg = document.querySelector('img');
+    console.log(myimg.dataset);
+    console.log(myimg.dataset.cpu);
+    console.log(myimg.dataset.ssd);
+</script>
+
+</html>

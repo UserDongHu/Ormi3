@@ -8,13 +8,13 @@
 </head>
 
 <body>
-    <article class="parent">
+    <!-- <article class="parent">
         <ol>
             <li><button class="btn-first" type="button">버튼1</button></li>
             <li><button type="button">버튼2</button></li>
             <li><button type="button">버튼3</button></li>
         </ol>
-    </article>
+    </article> -->
     <form action="#">
         <button type="submit" class="submit">제출</button>
     </form>
@@ -34,11 +34,19 @@
         //     console.log("이벤트가 발동하긴함..");
         // })
 
-        const $form = document.querySelector("form");
-        $form.addEventListener("submit",(e)=>{
-            console.log(e);
-            e.preventDefault();
-        })
+        // const $form = document.querySelector("form");
+        // $form.addEventListener("submit",(e)=>{
+        //     console.log(e);
+        //     e.preventDefault();
+        // })
+        const submit = document.querySelector('.submit');
+        submit.addEventListener('click', (event) => {
+            console.log('clicked');
+            event.stopPropagation();
+        });
+        document.body.addEventListener('click', () => {
+            console.log('event still alive!');
+        });
     </script>
 </body>
 
