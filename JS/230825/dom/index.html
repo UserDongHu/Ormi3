@@ -12,6 +12,7 @@
         height: 100px;
         background-color: #000000;
         transition: 1s;
+        color: white;
 
     }
 
@@ -23,7 +24,7 @@
 </style>
 
 <body>
-    <!-- <div></div> -->
+    <div>클릭해봐</div>>
     <ul>
     </ul>
     <input />
@@ -35,7 +36,14 @@
         data-health="400" data-mana="250" data-skill="yamato-cannon" />
 </body>
 <script>
-
+    const box = document.querySelector("div");
+    box.addEventListener('click', function () {
+        if (box.classList.contains('red')) {
+            box.classList.remove('red');
+        } else {
+            box.classList.add('red');
+        }
+    })
     // todo list 만들기
     // 내 화면의 버튼을 선택하여 가져옵니다.
     // 내가 할일을 추가할 UL을 가져옵니다.
