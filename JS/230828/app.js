@@ -3,7 +3,7 @@ const mainContainer = document.getElementById("main");
 
 //상품 카드 만드는 부분
 // 상품 이미지 주소, 가격, 상품이름을 받으면 상품 카드를 만들어주는 함수!
-function createProductCard(imgUrl,price,productName, onClick) {
+function createProductCard(imgUrl, price, productName, onClick) {
     const $productCard = document.createElement("div");
     const $productName = document.createElement("strong");
     const $price = document.createElement("span");
@@ -14,7 +14,7 @@ function createProductCard(imgUrl,price,productName, onClick) {
     $productName.innerText = productName;
     // $productCard.append($thumbnailImg, $productName, $price)
     $productCard.append($productName, $price)
-    $productCard.addEventListener("click",onClick)
+    $productCard.addEventListener("click", onClick)
 
     return $productCard
 }
@@ -26,7 +26,7 @@ function createProductDetail(imgUrl) {
 }
 
 // 여기까지
-function main() {
+async function main() {
 
     const productsContainer = document.createElement("div");
     productsContainer.id = "products";
@@ -34,32 +34,31 @@ function main() {
     detailContainer.id = "detail";
     mainContainer.appendChild(productsContainer)
     mainContainer.appendChild(detailContainer)
-    fetch(BASE_URL+"mall").then((res)=>{
-        return res.json();
-    }).then((json)=>{
-        json.forEach(data => {
-            const productId = data.id;
-            const productImgUrl = BASE_URL+data.thumbnailImg;
-            const productName = data.productName;
-            const price = data.price;
-            const onClick = async (e)=>{
-                detailContainer.innerHTML = "";
-                const res = await fetch(BASE_URL+"mall/"+productId);
-                const json = await res.json();
-                json.detailInfoImage.forEach(imgUrl=>{
-                    const detailImgUrl = BASE_URL+imgUrl
-                    const $productDetail = createProductDetail(detailImgUrl)
-                    detailContainer.appendChild($productDetail)
-                })
+    const res = await fetch(BASE_URL + "mall");
+    const json = await res.json();
+    json.forEach(data => {
+        const productId = data.id;
+        const productImgUrl = BASE_URL + data.thumbnailImg;
+        const productName = data.productName;
+        const price = data.price;
+        const onClick = async (e) => {
+            detailContainer.innerHTML = "";
+            const res = await fetch(BASE_URL + "mall/" + productId);
+            const json = await res.json();
+            json.detailInfoImage.forEach(imgUrl => {
+                const detailImgUrl = BASE_URL + imgUrl
+                const $productDetail = createProductDetail(detailImgUrl)
+                detailContainer.appendChild($productDetail)
+            })
 
-            }
-            const $productCard = createProductCard(productImgUrl,price,productName,onClick)
-            productsContainer.appendChild($productCard);
-        });
+        }
+        const $productCard = createProductCard(productImgUrl, price, productName, onClick)
+        productsContainer.appendChild($productCard);
     });
-    
+    ;
+
 }
 // async function name(params) {
-    
+
 // }
 main();
