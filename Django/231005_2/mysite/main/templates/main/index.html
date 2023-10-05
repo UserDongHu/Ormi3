@@ -1,0 +1,5 @@
+<h2>잘 나가는 상품 10개 소개</h2>
+{% for i, j in product.items %}
+<a href="product/{{i}}">{{i}}번째 상품</a>
+<p>이름 : {{j.name}}</p>
+{% endfor %}
