@@ -1,0 +1,7 @@
+<h1>{{no}}번째 상품</h1> 
+<!-- product/2 이면 2번째 상품, product/4 면 4번째 상품 -->
+<a href="{% url 'product:index' %}">상품 목록 페이지로 가기</a> 
+<!-- urls에서 네임스페이스 product의  name='index'인 path호출 -->
+<p>이름 : {{product.title}}</p>
+<p>가격 : {{product.price}}</p>
+<p>~상세정보~</p>

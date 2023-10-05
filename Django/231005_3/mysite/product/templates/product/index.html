@@ -1,0 +1,7 @@
+<h1>상품 목록 페이지 입니다.</h1>
+<a href="{% url 'main:index' %}">메인 페이지로 가기</a>
+
+<!-- django templates launguage 사용해서 for문으로 DB에서 key와 value뽑아서 보여주기 -->
+{% for i, j in productDB.items %}
+<p><a href="./{{i}}">{{i}} : {{j.title}}</a></p>
+{% endfor %}
