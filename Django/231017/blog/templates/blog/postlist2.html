@@ -1,0 +1,29 @@
+{% for i in posts %}
+    <h1>{{i.title}}</h1>
+    <p>{{i.content}}</p>
+    <p>{{forloop.counter}}</p>
+    <p>{{forloop.counter|add:100}}</p>
+    <p>{{forloop.counter0}}</p>
+    <p>{{forloop.revcounter}}</p>
+    <p>{{forloop.first}}</p>
+    <p>{{forloop.last}}</p>
+    <hr>
+{% endfor %}
+
+{# 잘 안씀 #}
+{% with value='hello world' %}
+    <h1>{{value}}</h1>
+{% endwith %}
+
+{# 주석 #}
+{% comment %}
+여러줄 주석은 이렇게
+{% endcomment %}
+
+{% comment %}
+
+{% url 'some-url-name' v1 v2 %}
+{% url 'some-url-name' arg1=v1 arg2=v2 %}
+
+path("client/<int:id>/", app_views.client, name="app-views-client")
+{% url 'app-views-client' client.id %} {% endcomment %}

@@ -1,0 +1,15 @@
+{% for i in posts %}
+    <p>{{i.content|safe}}</p>
+{% endfor %}
+<hr>
+{% for i in posts %}
+{% autoescape off %}
+    <p>{{i.content|safe}}</p>
+{% endautoescape %}
+{% endfor %}
+<hr>
+{% load markdown_deux_tags %}
+{% for i in posts %}
+    <p>{{i.content|markdown}}</p>
+{% endfor %}
+<hr>
